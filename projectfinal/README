@@ -1,0 +1,17 @@
+hello mr trib, as you can see i researched flask and got good at it, however this means there is special instructions to run my code.
+copy the files onto your laptop
+open your terminal
+open the project file in your terminal
+run these 3 codes
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+
+then click the https link it gives you.
+
+
+this all requires you to install flask first which is
+pip install flask
+
+in your terminal
+
