@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess by Attributes</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { padding: 10px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Guess That Dog Breed Based on Attributes</h1>
+    <p><strong>Life Span:</strong> {{ attributes.life_span }}</p>
+    <p><strong>Temperament:</strong> {{ attributes.temperament }}</p>
+    <p><strong>Origin:</strong> {{ attributes.origin }}</p>
+    <form action="/check_attributes_guess" method="post">
+        <input type="text" name="guess" placeholder="Enter breed guess">
+        <input type="hidden" name="breed_name" value="{{ attributes.name }}">
+        <input type="hidden" name="life_span" value="{{ attributes.life_span }}">
+        <input type="hidden" name="temperament" value="{{ attributes.temperament }}">
+        <input type="hidden" name="origin" value="{{ attributes.origin }}">
+        <button type="submit">Submit Guess</button>
+    </form>
+</body>
+</html>

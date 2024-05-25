@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        p { font-size: 18px; margin-bottom: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Guess That Dog Breed Based on Attributes</h1>
+    <p><strong>Life Span:</strong> {{ attributes.life_span }}</p>
+    <p><strong>Temperament:</strong> {{ attributes.temperament }}</p>
+    <p><strong>Origin:</strong> {{ attributes.origin }}</p>
+    <p style="color: {{ color }};">{{ result }}</p>
+    <form action="/guess_attributes_again" method="post">
+        <button type="submit">Play Again</button>
+    </form>
+    <br>
+    <a href="/">Back to Image Guessing</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        img { max-width: 300px; border-radius: 8px; margin-bottom: 20px; }
+        p { font-size: 18px; margin-bottom: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Guess That Dog</h1>
+    <img src="{{ image_url }}" alt="Random Dog">
+    <p style="color: {{ color }};">{{ result }}</p>
+    <form action="/play_again" method="post">
+        <button type="submit">Play Again</button>
+    </form>
+</body>
+</html>
+

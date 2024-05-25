@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess That Dog</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        img { max-width: 300px; border-radius: 8px; margin-bottom: 20px; }
+        input, button { padding: 10px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Guess That Dog</h1>
+    <img src="{{ image_url }}" alt="Random Dog">
+    <form action="/check_guess" method="post">
+        <input type="text" name="guess" placeholder="Enter breed guess">
+        <input type="hidden" name="breed" value="{{ breed }}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+        <button type="submit">Submit Guess</button>
+    </form>
+    <br>
+    <a href="/guess_attributes">Guess Based on Attributes</a>
+    <br>
+    <a href="/breed_lookup">Look Up a Dog Breed</a>
+</body>
+</html>

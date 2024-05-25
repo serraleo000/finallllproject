@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up a Dog Breed</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { padding: 10px; font-size: 16px; margin: 10px; }
+        p { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Look Up a Dog Breed</h1>
+    <form action="/lookup_result" method="post">
+        <input type="text" name="breed_name" placeholder="Enter breed name">
+        <button type="submit">Look Up</button>
+    </form>
+    {% if result %}
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed Lookup Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        img { max-width: 300px; border-radius: 8px; margin-bottom: 20px; }
+        p { font-size: 18px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <!--pops the screen with the requested info-->
+    <h1>{{ attributes.name }}</h1>
+    <img src="{{ attributes.image_url }}" alt="{{ attributes.name }}">
+    <p><strong>Life Span:</strong> {{ attributes.life_span }}</p>
+    <p><strong>Temperament:</strong> {{ attributes.temperament }}</p>
+    <p><strong>Origin:</strong> {{ attributes.origin }}</p>
+    <a href="/breed_lookup">Look Up Another Breed</a>
+    <br><br>
+    <a href="/">Back to Main Game</a>
+</body>
+</html>
